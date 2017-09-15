@@ -1,3 +1,13 @@
+#[cfg(target_os = "redox")]
+mod redox;
+
+#[cfg(target_os = "redox")]
+pub use self::redox::{
+    IoVec,
+    MAX_LENGTH,
+};
+
+
 #[cfg(unix)]
 mod unix;
 
